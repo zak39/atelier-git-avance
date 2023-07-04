@@ -23,12 +23,23 @@ namespace App {
             parent::__construct($name);
         }
     }
+
+    class Yenefer extends Personnage {
+        public function __construct(private string $name)
+        {
+            parent::__construct($name);
+        }
+    }
 }
 
 namespace {
 
     use App\Geralt;
+    use App\Yenefer;
 
     $perso01 = new Geralt('geralt');
     print($perso01->getName() . PHP_EOL);
+
+    $yen = new Yenefer('Yenefer');
+    print($yen->getName() . PHP_EOL);
 }
